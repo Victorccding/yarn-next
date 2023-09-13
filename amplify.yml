@@ -6,7 +6,8 @@ applications:
       phases:
         preBuild:
           commands:
-            - yarn install
+            - yarn install --frozen-lockfile --ignore-platform
+            - du -h -d2 .
         build:
           commands:
             - yarn workspace @project/web-app build
