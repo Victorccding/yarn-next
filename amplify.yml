@@ -6,7 +6,7 @@ applications:
       phases:
         preBuild:
           commands:
-            - yarn install
+            - yarn install --frozen-lockfile
             - du -h -d2 .
         build:
           commands:
