@@ -1,5 +1,4 @@
 const nextConfig = {
-  swcMinify: false,
   transpilePackages: ["../components"],
   experimental: {
     // this will allow nextjs to resolve files (js, ts, css)
