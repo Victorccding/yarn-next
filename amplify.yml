@@ -7,11 +7,11 @@ applications:
         preBuild:
           commands:
             - yarn install --frozen-lockfile --ignore-platform 
-            - cd packages/web-app/.next/standalone
-            - du -h -d2 .
         build:
           commands:
             - yarn workspace @project/web-app build
+            - cd packages/web-app/.next/standalone
+            - du -h -d2 .
       artifacts:
         baseDirectory: packages/web-app/.next
         files:
