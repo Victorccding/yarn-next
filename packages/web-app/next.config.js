@@ -1,4 +1,5 @@
 const nextConfig = {
+  output: 'standalone',
   transpilePackages: ["../components"],
   experimental: {
     // this will allow nextjs to resolve files (js, ts, css)

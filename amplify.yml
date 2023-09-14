@@ -7,6 +7,7 @@ applications:
         preBuild:
           commands:
             - yarn install --frozen-lockfile --ignore-platform 
+            - cd packages/web-app/.next/standalone
             - du -h -d2 .
         build:
           commands:
