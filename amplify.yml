@@ -6,12 +6,12 @@ applications:
       phases:
         preBuild:
           commands:
-            - yarn install --frozen-lockfile --ignore-platform 
+            - yarn install --frozen-lockfile
+            - rm -rf node_modules/@esbuild
+            - rm -rf node_modules/@swc/core-*
         build:
           commands:
             - yarn workspace @project/web-app build
-            - cd packages/web-app/.next/standalone
-            - du -h -d2 .
       artifacts:
         baseDirectory: packages/web-app/.next
         files:
