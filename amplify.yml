@@ -10,7 +10,6 @@ applications:
         build:
           commands:
             - yarn workspace @project/web-app build
-            - rm -rf node_modules/@swc/core-*
       artifacts:
         baseDirectory: packages/web-app/.next
         files:
