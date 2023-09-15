@@ -10,6 +10,10 @@ applications:
         build:
           commands:
             - yarn workspace @project/web-app build
+            - rm -f packages/web-app/.next/next-minimal-server.js.nft.json
+            - rm -f packages/web-app/.next/next-server.js.nft.json
+            - rm -f node_modules/@swc/core-linux-x64-gnu/swc.linux-x64-gnu.node
+            - rm -f node_modules/@swc/core-linux-x64-musl/swc.linux-x64-musl.node
       artifacts:
         baseDirectory: packages/web-app/.next
         files:
